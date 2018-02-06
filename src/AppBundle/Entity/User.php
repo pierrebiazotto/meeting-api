@@ -79,7 +79,7 @@ class User
     return $this->comments;
   }
 
-  public function setComments(Comment $comments)
+  public function setComments($comments)
   {
     $this->comments = $comments;
   }
@@ -91,7 +91,7 @@ class User
     return $this->ratings;
   }
 
-  public function setRatings(Rating $ratings)
+  public function setRatings($ratings)
   {
     $this->ratings = $ratings;
   }

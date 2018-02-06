@@ -46,7 +46,7 @@ class Category
     return $this->outings;
   }
 
-  public function setOutings(Outing $outings)
+  public function setOutings($outings)
   {
     $this->outings = $outings;
   }

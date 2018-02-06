@@ -93,7 +93,7 @@ class Outing
     return $this->ratings;
   }
 
-  public function setRatings(Rating $ratings)
+  public function setRatings($ratings)
   {
     $this->ratings = $ratings;
   }
@@ -106,7 +106,7 @@ class Outing
     return $this->games;
   }
 
-  public function setGames(Game $games)
+  public function setGames($games)
   {
     $this->games = $games;
   }

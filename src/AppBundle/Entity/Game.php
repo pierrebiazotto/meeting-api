@@ -49,7 +49,7 @@ class Game
     return $this->outings;
   }
 
-  public function setOutings(Outing $ountings)
+  public function setOutings($ountings)
   {
     $this->outings = $outings;
   }
