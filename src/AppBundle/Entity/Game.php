@@ -49,9 +49,9 @@ class Game
     return $this->outings;
   }
 
-  public function setOuting(Outing $ounting)
+  public function setOutings(Outing $ountings)
   {
-    $this->outing = $outing;
+    $this->outings = $outings;
   }
 
   public function getId()

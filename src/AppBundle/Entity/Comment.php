@@ -58,9 +58,9 @@ class Comment
   }
 
   public function setUser(User $user)
-    {
-        $this->user = $user;
-    }
+  {
+      $this->user = $user;
+  }
 
   public function __construct()
   {
@@ -72,6 +72,11 @@ class Comment
   public function getOuting()
   {
     return $this->outings;
+  }
+
+  public function setOuting(Outing $outing)
+  {
+    $this->outing = $outing;
   }
 
   public function getId()

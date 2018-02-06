@@ -53,8 +53,8 @@ class Category
 
   public function addOuting(Outing $outing): void
   {
-      $outing->category = $this;
-      $this->$outings->add($outing);
+      $outing->setCategory($this) ;
+      $this->outings->add($outing);
   }
 
   public function removeOuting(Outing $outing): void

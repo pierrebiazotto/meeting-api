@@ -179,14 +179,14 @@ class Outing
     return $this->comments;
   }
 
-  public function setComments(Comment $comments)
+  public function setComment(Comment $comment)
   {
-    $this->comments = $comments;
+    $this->comment = $comment;
   }
 
   public function addComment(Comment $comment): void
   {
-      $comment->outing = $this;
+      $comment->setComment($this) ;
       $this->comments->add($comment);
   }
 
