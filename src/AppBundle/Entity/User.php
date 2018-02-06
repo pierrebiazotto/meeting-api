@@ -79,9 +79,9 @@ class User
     return $this->comments;
   }
 
-  public function setComment(Comment $comment)
+  public function setComments(Comment $comments)
   {
-    $this->comment = $comment;
+    $this->comments = $comments;
   }
   /**
    * @return Collection|Rating[]
@@ -91,9 +91,9 @@ class User
     return $this->ratings;
   }
 
-  public function setRating(Rating $rating)
+  public function setRatings(Rating $ratings)
   {
-    $this->rating = $rating;
+    $this->ratings = $ratings;
   }
 
   public function getId()

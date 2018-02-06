@@ -40,7 +40,7 @@ class Rating
    */
   private $outing;
 
-  public function getOuting(): Outing
+  public function getOuting()
   {
       return $this->outing;
   }

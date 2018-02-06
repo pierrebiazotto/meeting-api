@@ -93,25 +93,25 @@ class Outing
     return $this->ratings;
   }
 
-  public function setRating(Rating $rating)
+  public function setRatings(Rating $ratings)
   {
-    $this->rating = $rating;
+    $this->ratings = $ratings;
   }
 
   /**
    * @return Collection|Game[]
    */
-  public function getGames(): Game
+  public function getGames()
   {
     return $this->games;
   }
 
-  public function setGames(Game $game)
+  public function setGames(Game $games)
   {
-    $this->game = $game;
+    $this->games = $games;
   }
 
-  public function getCategory(): Category
+  public function getCategory()
   {
       return $this->category;
   }
@@ -174,14 +174,14 @@ class Outing
       $this->max_age = $max_age;
   }
 
-  public function getComments() : Comment
+  public function getComments()
   {
     return $this->comments;
   }
 
-  public function setComment(Comment $comment)
+  public function setComments(Comment $comments)
   {
-    $this->comment = $comment;
+    $this->comments = $comments;
   }
 
   public function addComment(Comment $comment): void

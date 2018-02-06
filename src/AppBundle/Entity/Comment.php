@@ -69,14 +69,14 @@ class Comment
   /**
    * @return Collection|Outing[]
    */
-  public function getOuting()
+  public function getOutings()
   {
     return $this->outings;
   }
 
-  public function setOuting(Outing $outing)
+  public function setOutings(Outing $outings)
   {
-    $this->outing = $outing;
+    $this->outings = $outings;
   }
 
   public function getId()
