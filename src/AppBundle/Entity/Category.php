@@ -46,6 +46,23 @@ class Category
     return $this->outings;
   }
 
+  public function setOutings(Outing $outings)
+  {
+    $this->outings = $outings;
+  }
+
+  public function addOuting(Outing $outing): void
+  {
+      $outing->category = $this;
+      $this->$outings->add($outing);
+  }
+
+  public function removeOuting(Outing $outing): void
+  {
+      $outing->category = null;
+      $this->outings->removeElement($outing);
+  }
+
   public function getId()
   {
       return $this->id;

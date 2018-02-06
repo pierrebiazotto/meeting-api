@@ -30,12 +30,12 @@ class Game
   private $name;
 
   /**
-   * @var Outing The outing of this comment
+   * @var Outing The outing of this game
    *
-   * @ORM\ManyToOne(targetEntity="Outing", inversedBy="comment")
+   * @ORM\ManyToOne(targetEntity="Outing", inversedBy="games")
    * @Assert\NotNull
    */
-  private $outing;
+  private $outings;
 
   public function __construct()
   {
@@ -44,9 +44,14 @@ class Game
   /**
    * @return Collection|Outing[]
    */
-  public function getOuting()
+  public function getOutings()
   {
     return $this->outings;
+  }
+
+  public function setOuting(Outing $ounting)
+  {
+    $this->outing = $outing;
   }
 
   public function getId()

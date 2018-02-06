@@ -10,7 +10,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @ApiResource
  * @ORM\Entity
  */
-class Users
+class User
 {
   /**
    * @var int The id of this User.
@@ -79,12 +79,21 @@ class Users
     return $this->comments;
   }
 
+  public function setComment(Comment $comment)
+  {
+    $this->comment = $comment;
+  }
   /**
    * @return Collection|Rating[]
    */
   public function getRatings()
   {
     return $this->ratings;
+  }
+
+  public function setRating(Rating $rating)
+  {
+    $this->rating = $rating;
   }
 
   public function getId()

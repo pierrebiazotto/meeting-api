@@ -39,13 +39,15 @@ class Comment
   /**
    * @var Outing The outing of this comment
    *
-   * @ORM\ManyToOne(targetEntity="Outing", inversedBy="comment")
+   * @ORM\ManyToOne(targetEntity="Outing", inversedBy="comments")
    * @Assert\NotNull
    */
   private $outing;
 
   /**
-   * @ORM\ManyToOne(targetEntity="Users", inversedBy="comments")
+   * @var User The owner of this comment
+   *
+   * @ORM\ManyToOne(targetEntity="User", inversedBy="comments")
    * @ORM\JoinColumn(nullable=true)
    */
   private $user;

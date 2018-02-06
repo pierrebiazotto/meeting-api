@@ -75,12 +75,13 @@ class Outing
   private $ratings;
 
   /**
-   * @ORM\OneToMany(targetEntity="Game", mappedBy="outing")
+   * @ORM\OneToMany(targetEntity="Game", mappedBy="outings")
    */
   private $games;
 
   public function __construct()
   {
+      $this->comments = new ArrayCollection();
       $this->ratings = new ArrayCollection();
       $this->games = new ArrayCollection();
   }
@@ -92,12 +93,22 @@ class Outing
     return $this->ratings;
   }
 
+  public function setRating(Rating $rating)
+  {
+    $this->rating = $rating;
+  }
+
   /**
    * @return Collection|Game[]
    */
-  public function getGames()
+  public function getGames(): Game
   {
     return $this->games;
+  }
+
+  public function setGames(Game $game)
+  {
+    $this->game = $game;
   }
 
   public function getCategory(): Category
@@ -173,4 +184,15 @@ class Outing
     $this->comments = $comments;
   }
 
+  public function addComment(Comment $comment): void
+  {
+      $comment->outing = $this;
+      $this->comments->add($comment);
+  }
+
+  public function removeComment(Comment $comment): void
+  {
+      $comment->outing = null;
+      $this->comments->removeElement($comment);
+  }
 }
