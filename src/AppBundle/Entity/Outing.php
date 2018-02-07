@@ -75,7 +75,8 @@ class Outing
   private $ratings;
 
   /**
-   * @ORM\OneToMany(targetEntity="Game", mappedBy="outings")
+   * @ORM\ManyToOne(targetEntity="Game", inversedBy="outings")
+   * @ORM\JoinColumn(nullable=true)
    */
   private $games;
 
@@ -83,7 +84,6 @@ class Outing
   {
       $this->comments = new ArrayCollection();
       $this->ratings = new ArrayCollection();
-      $this->games = new ArrayCollection();
   }
   /**
    * @return Collection|Rating[]
@@ -98,9 +98,7 @@ class Outing
     $this->ratings = $ratings;
   }
 
-  /**
-   * @return Collection|Game[]
-   */
+
   public function getGames()
   {
     return $this->games;

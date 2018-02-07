@@ -45,7 +45,7 @@ class User
   /**
    * @var string The password of this User.
    *
-   * @ORM\Column(type="varchar")
+   * @ORM\Column(type="string")
    */
   private $password;
 
